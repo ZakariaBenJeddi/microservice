@@ -11,7 +11,8 @@ mongoose.set('strictQuery', true);
 
 async function connectDB() {
   try {
-    await mongoose.connect("mongodb://localhost/produit-service");
+    // await mongoose.connect("mongodb://localhost/produit-service");
+    await mongoose.connect("mongodb://db:27017/produit-service");
     console.log("Produit-Service DB Connected");
   } catch (error) {
     console.error("Erreur de connexion à MongoDB:", error);

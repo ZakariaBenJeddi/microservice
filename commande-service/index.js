@@ -12,7 +12,8 @@ mongoose.set("strictQuery", true);
 
 async function connectDB() {
   try {
-    await mongoose.connect("mongodb://localhost/commande-service");
+    // await mongoose.connect("mongodb://localhost/commande-service");
+    await mongoose.connect("mongodb://db:27017/commande-service");
     console.log("Commande-Service DB Connected");
   } catch (error) {
     console.error("Erreur de connexion à MongoDB:", error);

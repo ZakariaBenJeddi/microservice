@@ -12,7 +12,8 @@ mongoose.set('strictQuery', true);
 
 async function connectDB() {
   try {
-    await mongoose.connect("mongodb://localhost/auth-service");
+    // await mongoose.connect("mongodb://localhost/auth-service");
+    await mongoose.connect("mongodb://db:27017/auth-service");
     console.log("Auth-Service DB Connected");
   } catch (error) {
     console.error("Erreur de connexion à MongoDB:", error);
